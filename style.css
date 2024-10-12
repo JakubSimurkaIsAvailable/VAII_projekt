@@ -1,4 +1,4 @@
-* {
+/*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -11,8 +11,73 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+nav a {
+    color: #fdcc04;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.navMenu {
+    display: inline;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catchPhrase {
+    color: #fdcc04;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .mainSection {
     background: #2a445e;
+
+}
+*/
+    
+
+    
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.header {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.container {
+    width: 40%;
+    min-height: 100vh;
+    background: rgba(80, 80, 80, 0.6);
+    position: relative;
+    transform: translateX();
+}
+.icon {
+    width: 200px;
+    cursor: pointer;
+} 
+.info {
+    padding: 50px, 18%;
+    color: aliceblue;
+    margin-left: 35px;
+}
+.info h3 {
+    font-size: 42px;
+    line-height: 60px;
+    font-weight: normal;
+}
+.info h1 {
+    font-size: 92px;
+    font-weight: normal;
+    margin-bottom: 35px;
 }
