@@ -60,7 +60,18 @@ nav a {
     min-height: 100vh;
     background: rgba(80, 80, 80, 0.6);
     position: relative;
-    transform: translateX();
+    transform: translateX(-100%);
+    animation-duration: 2s;
+    animation-name: pull;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.menu {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    filter: brightness(0.29);
+    cursor: pointer;
 }
 .icon {
     width: 200px;
@@ -80,4 +91,13 @@ nav a {
     font-size: 92px;
     font-weight: normal;
     margin-bottom: 35px;
+}
+
+@keyframes pull {
+    0%{
+
+    }
+    100%{
+        transform: translateX(0.01%);
+    }
 }
