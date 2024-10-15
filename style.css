@@ -1,18 +1,19 @@
- *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.header {
+.container {
     max-width: 100%;
     min-height: 100vh;
     background-image: url(images/background.jpg);
     background-size: cover;
     background-position: center;
 }
-.container {
+.containerWO {
     max-width: 40%;
+    min-width: max-content;
     min-height: 100vh;
     background: rgba(80, 80, 80, 0.6);
     position: relative;
@@ -22,14 +23,7 @@
     animation-delay: 1s;
     animation-fill-mode: forwards;
 }
-.menu {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    filter:brightness(0);
-    opacity: 0.5;
-    cursor: pointer;
-}
+
 .icon {
     max-width: 200px;
     cursor: pointer;
@@ -43,60 +37,60 @@
     flex-shrink: inherit;
 }
 .info h3 {
-    font-size: calc(1.5rem + 2vw);
+    font-size: 3rem;
     line-height: 60px;
     font-weight: normal;
 }
 .info h1 {
-    font-size: calc(1.5rem + 4vw);
+    font-size: 4rem;
     font-weight: normal;
     margin-bottom: 35px;
     
 }
 
-.sidebar {
+.flex-shrink-0 {
+    position: relative;
     top: 0px;
     right: 0px;
-    position: absolute;
-    height: 100%;
+    width: 280px;
 }
 
-.slide {
-    height: inherit;
-    width:180px;
-    position: relative;
-    background-color: grey;
-    transition: 0.5s ease;
-    top: 0%;
-    right: 0%;
-}
-ul li {
-    list-style: none;
-}
-
-ul li a {
-    color: aliceblue;
-    display: block;
-    text-transform: capitalize;
-    text-decoration: none;
-    padding: 5px 0;
-}
-
-input {
-    display: none;
-    visibility: hidden;
-    
-}
-
-.toggle {
-    right: 0;
-    position: relative;
-    height: 60px;
-    width: 60px;
-    z-index: 1;
+button {
+    margin: 10px;
+    display: inline-block;
+    outline: none;
     cursor: pointer;
-    background-color: red;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: capitalize;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 16px 14px 18px;
+    box-shadow: inset 0 0 0 2px aliceblue;
+    color: aliceblue;
+    background-color: transparent;
+    height: 48px;
+
 }
+button:hover{
+    color: #5b3e30;
+    background-color: aliceblue;
+}
+
+
+@media (max-width: 768px) {
+    .containerWO {
+        min-width: 100%;
+    }
+}
+
 
 @keyframes pull {
     0%{
