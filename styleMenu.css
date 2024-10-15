@@ -1,0 +1,23 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hero{ 
+    max-width: 100%;
+    min-height: 100vh;
+    background-image: url("images/mountains.jpg");
+    background-size: cover;
+    background-position: center;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.carousel {
+    height: 80px;
+}
