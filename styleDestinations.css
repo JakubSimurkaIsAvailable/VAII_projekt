@@ -1,0 +1,49 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hero{ 
+    max-width: 100%;
+    min-height: 100vh;
+    background-image: url("images/mountains.jpg");
+    background-size: cover;
+    background-position: center;
+    align-items: flex;
+    justify-content: center;
+    display: flex;
+    transform: translateY(40px);
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+.container {
+    align-items: flex;
+    justify-content: center;
+    display: flex;
+    
+}
+h1 {
+    position: relative;
+    text-align: center;
+}
+.card {
+    margin: 50px;
+}
+.searchField {
+    align-items: flex;
+    justify-content: center;
+    display: flex;
+}
+.cards{
+    
+}
+@media (max-width: 992px) {
+    form{
+        margin-top: 10px;
+    }
+}

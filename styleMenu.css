@@ -1,0 +1,39 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hero{ 
+    max-width: 100%;
+    min-height: 100vh;
+    background-image: url("images/mountains.jpg");
+    background-size: cover;
+    background-position: center;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+.container {
+    transform: translateY(100px);
+    align-items: center;
+    justify-content: center;
+}
+h1 {
+    position: relative;
+    text-align: center;
+}
+.card {
+    margin: 20px;
+    align-items: center;
+}
+.card-img-left {
+    height: 160px;
+    width: 160px;
+}
+.card-body {
+    flex: 1;
+}

@@ -1,62 +1,19 @@
-/*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Trebuchet MS", serif;
-}
-
-nav {
-    height: 50px;
-    background: #2a445e;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-nav a {
-    color: #fdcc04;
-    text-decoration: none;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-.navMenu {
-    display: inline;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.catchPhrase {
-    color: #fdcc04;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-style: italic;
-}
-
-.mainSection {
-    background: #2a445e;
-
-}
-*/
-    
-
-    
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.header {
-    width: 100%;
+.container {
+    max-width: 100%;
     min-height: 100vh;
     background-image: url(images/background.jpg);
     background-size: cover;
     background-position: center;
 }
-.container {
-    width: 40%;
+.containerWO {
+    max-width: 40%;
+    min-width: max-content;
     min-height: 100vh;
     background: rgba(80, 80, 80, 0.6);
     position: relative;
@@ -66,32 +23,74 @@ nav a {
     animation-delay: 1s;
     animation-fill-mode: forwards;
 }
-.menu {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    filter: brightness(0.29);
-    cursor: pointer;
-}
+
 .icon {
-    width: 200px;
+    max-width: 200px;
     cursor: pointer;
 } 
 .info {
+    position: absolute;
     padding: 50px, 18%;
     color: aliceblue;
     margin-left: 35px;
+    display: block;
+    flex-shrink: inherit;
 }
 .info h3 {
-    font-size: 42px;
+    font-size: 3rem;
     line-height: 60px;
     font-weight: normal;
 }
 .info h1 {
-    font-size: 92px;
+    font-size: 4rem;
     font-weight: normal;
     margin-bottom: 35px;
+    
 }
+
+.flex-shrink-0 {
+    position: relative;
+    top: 0px;
+    right: 0px;
+    width: 280px;
+}
+
+button {
+    margin: 10px;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: capitalize;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 16px 14px 18px;
+    box-shadow: inset 0 0 0 2px aliceblue;
+    color: aliceblue;
+    background-color: transparent;
+    height: 48px;
+
+}
+button:hover{
+    color: #5b3e30;
+    background-color: aliceblue;
+}
+
+
+@media (max-width: 768px) {
+    .containerWO {
+        min-width: 100%;
+    }
+}
+
 
 @keyframes pull {
     0%{
