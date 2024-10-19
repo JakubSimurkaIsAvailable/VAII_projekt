@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    padding: 1rem;
+    background-color: #5b3e30;
+    color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.container {
+    margin-top: 1.5rem;
+}
+
+#trip-info {
+    margin-bottom: 2rem;
+}
+#add-destination {
+    margin-bottom: 2rem;
+}
+.container h2 {
+    color: #5b3e30;
+    margin-bottom: 1rem;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    position: fixed;
+    bottom: 0%;
+    background-color: lightgray;
+    padding: 0.5rem;
+}

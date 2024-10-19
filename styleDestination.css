@@ -1,0 +1,11 @@
+body{
+    background-image: url("images/mountains.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.card img{
+    max-height: 200px;
+}
+.card {
+    padding: 10px;
+}

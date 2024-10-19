@@ -2,91 +2,137 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destinations</title>
-    <link rel="stylesheet" href="styleDestinations.css">
+    <link rel="stylesheet" href="styleDestination.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="header">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: fixed; width: 100%;  z-index: 1;">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img src="images/icon3.png" alt="Logo" width="30" class="d-inline-block align-text-top"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="mainMenu.html">Main Menu</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="itinerary.html">Itinerary</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="destination.html">Destinations</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Contact
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="https://www.instagram.com">Instagram</a></li>
-                      <li><a class="dropdown-item" href="https://www.facebook.com">Facebook</a></li>
-                      <li><a class="dropdown-item" href="https://www.twitter.com">Twitter</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <form class="d-flex flex-grow-1 ms-lg-3" style="margin-right: 12px;">
-                <input class="form-control me-2 flex-grow-1" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </nav>
-
-            
-    </div>
-    
-    <div class="hero">
-        <div class="container">
-            <div class="row">
-                <div class="card" style="width: 18rem;">
-                    <img src="images/placeholder.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Map link</a>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <img src="images/placeholder.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Map link</a>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <img src="images/placeholder.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Map link</a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid mx-4">
+        <div class="row">
         </div>
-        
-    </div>
-        
+        <a class="navbar-brand" href="#"><img src="images/icon3.png" alt="Logo" width="30" class="d-inline-block align-text-top"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mainMenu.html">Main Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="itinerary.html">Itinerary</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="destination.html">Destinations</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Contact
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="https://www.instagram.com">Instagram</a></li>
+                  <li><a class="dropdown-item" href="https://www.facebook.com">Facebook</a></li>
+                  <li><a class="dropdown-item" href="https://www.twitter.com">Twitter</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </nav>
 
+    
+    <div class="container my-5">
+      <h1 class="text-center my-4">Search for your Destination</h1>
+      <form class="d-flex flex-grow-1 ms-lg-3" style="margin-right: 12px;">
+        <input class="form-control me-2 flex-grow-1" type="search" placeholder="ex. Bratislava" aria-label="Search">
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+    </form>
+        <h1 class="text-center my-4">Popular Destinations</h1>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://assets.radical.storage/luggage-storage/bratislava/350x200.1315.jpg" class="card-img-top" alt="Location 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Bratislava Castle</h5>
+                        <p class="card-text">A historic site and one of the main tourist attractions in Slovakia.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://sworld.co.uk/img/img/72/photoAlbum/316466/originals/0.jpg" class="card-img-top" alt="Location 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Devín Castle</h5>
+                        <p class="card-text">Explore the ruins of this historic castle, located near the confluence of the Danube and Morava rivers.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://www.u-f-o.sk/galleries/ufo/17.jpg" class="card-img-top" alt="Location 3">
+                    <div class="card-body">
+                        <h5 class="card-title">UFO Tower</h5>
+                        <p class="card-text">The UFO Tower in Bratislava is one of the city's most iconic landmarks, located on the SNP Bridge over the Danube River.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row g-4">
+          
+        </div>
+        <h1 class="text-center my-5">Surrounding Locations</h1>
+        <div class="row g-4">
+          <div class="col-md-4">
+              <div class="card h-100">
+                  <img src="https://i0.wp.com/mytravelation.com/wp-content/uploads/2023/12/Trnava-Slovakia.jpg" class="card-img-top" alt="Location 4">
+                  <div class="card-body">
+                      <h5 class="card-title">Trnava</h5>
+                      <p class="card-text">Known as the "Little Rome" for its many churches, Trnava is one of Slovakia’s oldest cities. It boasts a rich medieval history and well-preserved city walls.</p>
+                      <a href="#" class="btn btn-primary">Learn More</a>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="col-md-4">
+              <div class="card h-100">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Nitra_-_Panorama_01.JPG" class="card-img-top" alt="Location 5">
+                  <div class="card-body">
+                      <h5 class="card-title">Nitra</h5>
+                      <p class="card-text">Nitra, one of Slovakia’s oldest cities, is a cradle of early Slovak history and Christianity. Dominated by Nitra Castle, the city offers stunning views of the surrounding landscape.</p>
+                      <a href="#" class="btn btn-primary">Learn More</a>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="col-md-4">
+              <div class="card h-100">
+                  <img src="https://malekarpaty.travel/wp-content/uploads/2022/07/MODRA-20-1617x1080.jpg.webp" class="card-img-top" alt="Location 6">
+                  <div class="card-body">
+                      <h5 class="card-title">Modra</h5>
+                      <p class="card-text">Famous for its wine production, Modra is a picturesque town nestled in the foothills of the Little Carpathians.</p>
+                      <a href="#" class="btn btn-primary">Learn More</a>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <p>&copy; 2024 yourTravel Log</p>
+    </footer>
 </body>
 </html>
