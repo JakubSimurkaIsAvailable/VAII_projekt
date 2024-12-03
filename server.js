@@ -19,9 +19,33 @@ db.once('open', () => {
 });
 
 const tripSchema = new mongoose.Schema({
-  tripName: String,
-  startDate: Date,
-  endDate: Date,
+  tripName: {
+    type: String,
+    required: [true, 'Trip name is required'],
+    minlength: [3, 'Trip name must be at least 3 characters'],
+    maxlength: [100, 'Trip name must be less than 100 characters'],
+    match: [/^[a-zA-Z]/, 'Trip name must start with a letter']
+  },
+  startDate: {
+    type: Date,
+    required: [true, 'Start date is required'],
+    validate: {
+      validator: function(value) {
+        return value >= new Date().setHours(0, 0, 0, 0);
+      },
+      message: 'Start date must be today or later'
+    }
+  },
+  endDate: {
+    type: Date,
+    required: [true, 'End date is required'],
+    validate: {
+      validator: function(value) {
+        return value > this.startDate;
+      },
+      message: 'End date must be after start date'
+    }
+  }
 });
 
 const Trip = mongoose.model("Trip", tripSchema);
@@ -32,13 +56,13 @@ app.get('/', (req, res) => {
 
 // Create a new trip
 app.post('/post', async (req, res) => {
-  const trip = new Trip({
-    tripName: req.body.tripName,
-    startDate: req.body.startDate,
-    endDate: req.body.endDate
-  });
-  await trip.save();
-  res.status(200).send('Trip saved');
+  try {
+    const trip = new Trip(req.body);
+    await trip.save();
+    res.status(200).send('Trip saved');
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
 });
 
 // Read all trips
@@ -58,11 +82,15 @@ app.get('/trips/:id', async (req, res) => {
 
 // Update a trip by ID
 app.put('/trips/:id', async (req, res) => {
-  const trip = await Trip.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
-  if (!trip) {
-    return res.status(404).send('Trip not found');
+  try {
+    const trip = await Trip.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
+    if (!trip) {
+      return res.status(404).send('Trip not found');
+    }
+    res.status(200).json(trip);
+  } catch (error) {
+    res.status(400).send(error.message);
   }
-  res.status(200).json(trip);
 });
 
 // Delete a trip by ID
