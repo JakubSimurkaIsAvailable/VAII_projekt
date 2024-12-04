@@ -4,20 +4,19 @@ const mongoose = require('mongoose');
 const path = require('path');
 const port = 3001;
 
+//connect to database
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-// Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
-
 mongoose.connect('mongodb://127.0.0.1:27017/itinerary', { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.once('open', () => {
   console.log('Connected to MongoDB');
 });
 
+//Server validation
 const tripSchema = new mongoose.Schema({
   tripName: {
     type: String,
