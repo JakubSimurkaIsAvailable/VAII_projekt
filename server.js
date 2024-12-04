@@ -24,7 +24,13 @@ const tripSchema = new mongoose.Schema({
     required: [true, 'Trip name is required'],
     minlength: [3, 'Trip name must be at least 3 characters'],
     maxlength: [100, 'Trip name must be less than 100 characters'],
-    match: [/^[a-zA-Z]/, 'Trip name must start with a letter']
+    match: [/^[a-zA-Z]/, 'Trip name must start with a letter'],
+    validate: {
+      validator: function(value) {
+        return value[0] !== ' ';
+      },
+      message: 'Trip name cannot start with a space'
+    }
   },
   startDate: {
     type: Date,

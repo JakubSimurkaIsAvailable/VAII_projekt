@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Fetch and display all trips
+  //Read all trips
   const fetchTrips = async () => {
     try {
       const response = await fetch('http://localhost:3001/trips');
@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tripsContainer.innerHTML = '';
       trips.forEach(trip => {
         const tripElement = document.createElement('div');
+        //card with trip name, start date, end date and delete button
         tripElement.className = 'col-md-4';
         tripElement.innerHTML = `
           <div class="card" onclick="populateForm('${trip._id}', '${trip.tripName}', '${trip.startDate}', '${trip.endDate}')">
@@ -76,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Handle form submission for creating a new trip
+  
   tripForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (currentTripId) {
@@ -98,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fetchTrips();
       }
     } else {
-      // Create new trip
+      // Create a new trip
       const tripData = new FormData(tripForm);
       await fetch('http://localhost:3001/post', {
         method: 'POST',
